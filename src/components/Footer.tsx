@@ -43,8 +43,8 @@ export default function Footer({ onTabChange }: FooterProps) {
 
             <div className="flex items-center gap-2.5 mt-2">
               {[
-                { icon: <Github size={13} />, url: "https://github.com" },
-                { icon: <Twitter size={13} />, url: "https://twitter.com" }
+                { icon: <Github size={13} />, url: "https://github.com/" },
+                { icon: <Twitter size={13} />, url: "https://x.com/cakecordbot" }
               ].map((soc, idx) => (
                 <a
                   key={idx}
@@ -60,9 +60,9 @@ export default function Footer({ onTabChange }: FooterProps) {
           </div>
 
           {/* Right Links Cols */}
-          <div className="md:col-span-7 grid grid-cols-2 gap-8">
+          <div className="md:col-span-7 grid grid-cols-3 gap-8">
             
-            {/* Capabilities Col */}
+            {/* Legal Documents Col */}
             <div className="flex flex-col gap-3.5">
               <span className="text-[10px] font-mono font-bold tracking-wider text-zinc-500 uppercase">
                 / LEGAL DOCUMENTS
@@ -84,7 +84,7 @@ export default function Footer({ onTabChange }: FooterProps) {
               </div>
             </div>
 
-            {/* Studio Navigation Col */}
+            {/* Navigation Col */}
             <div className="flex flex-col gap-3.5">
               <span className="text-[10px] font-mono font-bold tracking-wider text-zinc-500 uppercase">
                 / NAVIGATION
@@ -94,38 +94,72 @@ export default function Footer({ onTabChange }: FooterProps) {
                   onClick={() => scrollToTopAndChange("home")}
                   className="text-left hover:text-zinc-100 transition-colors cursor-pointer"
                 >
-                  Home Landing
+                  Home
                 </button>
                 <button
                   onClick={() => scrollToTopAndChange("premium")}
                   className="text-left hover:text-zinc-100 transition-colors cursor-pointer"
                 >
-                  Premium Plan
+                  Premium
                 </button>
                 <button
                   onClick={() => scrollToTopAndChange("commands")}
                   className="text-left hover:text-zinc-100 transition-colors cursor-pointer"
                 >
-                  Slash Commands
+                  Commands
                 </button>
                 <button
                   onClick={() => scrollToTopAndChange("team")}
                   className="text-left hover:text-zinc-100 transition-colors cursor-pointer"
                 >
-                  Meet the Team
+                  Team
                 </button>
                 <button
                   onClick={() => scrollToTopAndChange("changelog")}
                   className="text-left hover:text-zinc-100 transition-colors cursor-pointer"
                 >
-                  Changelog Releases
+                  Changelog
                 </button>
                 <button
                   onClick={() => scrollToTopAndChange("support")}
                   className="text-left hover:text-zinc-100 transition-colors cursor-pointer"
                 >
-                  Help Desk Support
+                  Support
                 </button>
+              </div>
+            </div>
+
+            {/* Resource Links Col */}
+            <div className="flex flex-col gap-3.5">
+              <span className="text-[10px] font-mono font-bold tracking-wider text-zinc-500 uppercase">
+                / RESOURCES
+              </span>
+              <div className="flex flex-col gap-2.5 text-xs text-zinc-400">
+                <a
+                  href="https://docs.cakecord.co.uk/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-left hover:text-zinc-100 transition-colors"
+                >
+                  Documentation
+                </a>
+                <a
+                  href="https://cakecord.instatus.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-left hover:text-zinc-100 transition-colors"
+                >
+                  Status Page
+                </a>
+                <a
+                  href="https://discord.gg/8rA3Zeuqct"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-left hover:text-zinc-100 transition-colors"
+                >
+                  Discord Support
+                </a>
+                <span className="text-zinc-600 italic">Official CakeCord support links</span>
               </div>
             </div>
 
@@ -135,23 +169,22 @@ export default function Footer({ onTabChange }: FooterProps) {
 
         {/* Lower footer copyright details */}
         <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-[10px] font-mono text-zinc-500">
-            <span>© {new Date().getFullYear()} CakeCord. All rights reserved.</span>
-            <span className="hidden sm:inline-block text-zinc-800">|</span>
-            <span className="flex items-center gap-1">
-              <Sparkles size={10} className="text-pink-400" /> Crafted for Discord Communities
-            </span>
-          </div>
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-[10px] font-mono text-zinc-500">
+              <span>© {new Date().getFullYear()} CakeCord. All rights reserved.</span>
+              <span className="hidden sm:inline-block text-zinc-800">|</span>
+              <span className="flex items-center gap-1">
+                <Sparkles size={10} className="text-pink-400" /> Crafted for Discord Communities
+              </span>
+            </div>
 
-          {/* Back to top click trigger */}
-          <button
-            onClick={handleScrollToTop}
-            className="flex items-center gap-1.5 text-[10px] font-mono text-zinc-500 hover:text-zinc-300 transition-colors cursor-pointer group"
-          >
-            <span>Back to Top</span>
-            <ArrowUp size={11} className="group-hover:-translate-y-0.5 transition-transform" />
-          </button>
-        </div>
+            <button
+              onClick={handleScrollToTop}
+              className="flex items-center gap-1.5 text-[10px] font-mono text-zinc-500 hover:text-zinc-300 transition-colors cursor-pointer group"
+            >
+              <span>Back to Top</span>
+              <ArrowUp size={11} className="group-hover:-translate-y-0.5 transition-transform" />
+            </button>
+          </div>
 
       </div>
     </footer>
