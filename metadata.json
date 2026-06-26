@@ -1,0 +1,6 @@
+{
+  "name": "CakeCord",
+  "description": "CakeCord - Birthdays Made Easy. Keep every celebration on time and effortless with automatic birthday tracking, customized announcements, and role rewards in one clean workflow built for real Discord communities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
